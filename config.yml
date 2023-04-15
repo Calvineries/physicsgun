@@ -1,0 +1,11 @@
+#Message example: "§8[§cAdmin§8] §c%player% §freleased you."
+
+#Inform the player when he is caught by the physgun.
+#caught_type_message: none, chat, title or subtitle
+caught_type_message: none
+caught_message: ""
+
+#Inform the player when he is released.
+#release_type_message: none, chat, title or subtitle
+release_type_message: none
+release_message: ""
