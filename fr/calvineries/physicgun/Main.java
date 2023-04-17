@@ -33,6 +33,7 @@ public class Main extends JavaPlugin implements Listener {
     private String release_message;
     private List<Player> messageSent = new ArrayList<Player>();;
 
+
     @Override
     public void onEnable() {
     	messageSent.clear();
@@ -74,7 +75,7 @@ public class Main extends JavaPlugin implements Listener {
             sender.sendMessage("You get a §bPhysics Gun§r!");
             return true;
             
-        } else if (command.getName().equalsIgnoreCase("physicsgunreload") || command.getName().equalsIgnoreCase("physicsgunreload")) { 
+        } else if (command.getName().equalsIgnoreCase("physgunreload") || command.getName().equalsIgnoreCase("physicsgunreload")) { 
             if (!sender.isOp()) {
                 sender.sendMessage("You don't have permission to use this command.");
                 return true;
@@ -117,6 +118,10 @@ public class Main extends JavaPlugin implements Listener {
         }
         
         target.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, 0));
+        
+        if (targets.containsValue(target)) {
+            return;
+        }
 
         targets.put(player, target);
         Location targetLocation = target.getLocation();
