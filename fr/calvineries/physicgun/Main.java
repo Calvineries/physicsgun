@@ -117,7 +117,7 @@ public class Main extends JavaPlugin implements Listener {
             return;
         }
         
-        target.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, 0));
+        target.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, -1, false, false));
         
         if (targets.containsValue(target)) {
             return;
